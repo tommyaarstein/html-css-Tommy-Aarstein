@@ -1,0 +1,27 @@
+/* Header wrapper (optional, but future-safe) */
+header {
+  background-color: var(--color-bg-gold);
+}
+
+/* Logo */
+.logo-link img {
+  max-height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation list */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+.nav-list a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
