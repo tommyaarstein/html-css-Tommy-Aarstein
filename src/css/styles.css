@@ -1,19 +1,11 @@
-/* Use import to split up your CSS into manageable chunks */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Core partials */
 @import url("./_reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
 @import url("./_variables.css");
-/* Feel free to add as many of these imports as you need */
+@import url("./_base.css");
 
-body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-}
-
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+/* Add as you go */
+@import url("./_layout.css");
+@import url("./_header.css");
+@import url("./_components.css");
