@@ -7,20 +7,51 @@
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
 
-  <body class="centered">
-      <header>
-    <div class="container">
-      <a href="" class="logo-link">
+<body>
+  <header>
+    <div class="container header-bar">
+      <a href="index.html" class="logo-link">
         <img src="assets/images/RainyDays_Logo.png" alt="RainyDays Logo" />
       </a>
 
-      <nav aria-label="primary">
-        <ul class="nav-list"
-          <li><a href="">Home</a></li>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="active" href="index.html">Home</a></li>
           <li><a href="pages/products.html">Products</a></li>
-          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/coming-soon.html">About</a></li>
+        </ul>
       </nav>
+
+      <a href="pages/checkout.html" class="cart-link" aria-label="Shopping cart">
+        <img src="assets/images/icons8-shopping-cart-64.png" alt="" />
+        <span class="cart-badge" aria-hidden="true"></span>
+      </a>
+
+      <div class="auth-links">
+        <a href="pages/coming-soon.html">Login</a>
+        <span aria-hidden="true">|</span>
+        <a href="pages/coming-soon.html">Register</a>
+      </div>
     </div>
   </header>
-  </body>
+
+
+  <main id="main-content">
+    <section class="hero" aria-label="Featured">
+      <div class="hero-content container">
+        <h1>Pushing the Comfort Zone</h1>
+        <a class="btn btn-primary" href="pages/products.html">Buy Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div></div>
+      <p class="footer-copy">© 2025 Rainydays AS. All rights reserved.</p>
+      <p class="footer-icons">icons by Icons8</p>
+    </div>
+  </footer>
+
+</body>
 </html>

@@ -1,6 +1,23 @@
-/* Header wrapper (optional, but future-safe) */
+/* Header wrapper */
 header {
   background-color: var(--color-bg-gold);
+  width: 100%;
+}
+
+/* Main header row (logo | nav | actions) */
+.header-bar {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Center nav in the middle lane */
+.header-bar nav {
+  display: flex;
+  justify-content: center;
 }
 
 /* Logo */
@@ -10,17 +27,70 @@ header {
   display: block;
 }
 
-/* Navigation list */
+/* Navigation */
 .nav-list {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Navigation links */
 .nav-list a {
+  font-family: var(--font-main);
+  font-size: 20px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* underline for current page */
+.nav-list a.active {
+  border-bottom: 2px solid var(--color-text-primary);
+}
+
+/* Right side actions (cart + login/register) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Cart icon */
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cart-link img {
+  max-height: 30px;
+  width: auto;
+  display: block;
+}
+
+/* Badge (hidden until a number is added later) */
+.cart-badge {
+  display: none; /* later: turn on when it has a number */
+}
+
+.cart-link {
+  justify-self: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Login / Register */
+.auth-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-links a {
+  font-family: var(--font-main);
+  font-size: 15px;
   color: var(--color-text-primary);
   text-decoration: none;
   font-weight: 500;
