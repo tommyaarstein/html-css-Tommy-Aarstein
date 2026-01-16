@@ -24,7 +24,7 @@
 
       <a href="checkout.html" class="cart-link" aria-label="Shopping cart">
         <img src="../assets/images/icons8-shopping-cart-64.png" alt="" />
-        <span class="cart-badge" aria-hidden="true"></span>
+        <span class="cart-badge" aria-hidden="true">1</span>
       </a>
 
       <div class="auth-links">
@@ -35,8 +35,44 @@
     </div>
   </header>
   
-  <main>
-    <h1>Checkout!</h1>
+  <main class="checkout-page">
+    <section class="checkout container">
+      <h1 class="checkout-title">Checkout</h1>
+
+      <div class="checkout-card">
+        <section class="checkout-item" aria-label="Cart item">
+          <img class="checkout-item-img" src="../assets/images/RainyDays_Jacket1.jpg" alt="Peder jacket" />
+
+          <div class="checkout-item-info">
+            <h2 class="checkout-item-title">Outdoor work jacket</h2>
+            <p class="checkout-item-meta">Size: Large</p>
+            <p class="checkout-item-meta">Colour: Orange</p>
+            <p class="checkout-item-price">Price: kr 2199,-</p>
+          </div>
+
+          <div class="checkout-qty" aria-label="Quantity">
+            <button type="button" class="qty-btn" aria-label="Decrease quantity">-</button>
+            <span class="qty-value">1</span>
+            <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+          </div>
+        </section>
+
+        <div class="checkout-divider"></div>
+
+        <div class="checkout-totals">
+          <div class="totals-row">
+            <span>Shipping</span>
+            <span>kr 149,-</span>
+          </div>
+          <div class="totals-row totals-total">
+            <span>Total</span>
+            <span>kr 2348,-</span>
+          </div>
+
+          <a class="btn btn-primary checkout-btn" href="payment.html">Checkout</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
