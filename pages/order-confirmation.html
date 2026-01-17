@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Confirmation | Rainy Days</title>
+    <meta name="description" content="Confirmation of your order at RainyDays."/>
+    <title>Order Confirmation | RainyDays</title>
     <link rel="stylesheet" href="../src/css/styles.css" />
   </head>
 <body>
@@ -16,15 +17,15 @@
 
       <nav aria-label="Primary">
         <ul class="nav-list">
-          <li><a class="active" href="../index.html">Home</a></li>
-          <li><a class="active" href="products.html">Products</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="coming-soon.html">About</a></li>
         </ul>
       </nav>
 
       <a href="checkout.html" class="cart-link" aria-label="Shopping cart">
         <img src="../assets/images/icons8-shopping-cart-64.png" alt="" />
-        <span class="cart-badge" aria-hidden="true"></span>
+        <span class="cart-badge" aria-hidden="true">1</span>
       </a>
 
       <div class="auth-links">
@@ -35,8 +36,38 @@
     </div>
   </header>
   
-    <main>
-      <h1>Order confirmation!</h1>
+    <main class="order-page">
+      <section class="order container" aria-label="Order Confirmation">
+        <div class="order-card">
+          <h1 class="order-title">Thank you for your purchase!</h1>
+          <p class="order-number">Your order number is: <strong>#123456</strong></p>
+          <p class="order-info">
+            New orders will be shipped at 1pm every day. Your order confirmation<br />
+            will be sent to the email provided.
+          </p>
+          <div class="rating" aria-label="Rate your experience">
+            <p class="rating-label">Feel free to rate your experience:</p>
+
+            <div class="rating-stars">
+              <button type="button" class="star-btn" aria-label="Rate 1 star">
+                <img src="../assets/images/icons8-star-filled-48.png" alt="" />
+              </button>
+              <button type="button" class="star-btn" aria-label="Rate 2 stars">
+                <img src="../assets/images/icons8-star-filled-48.png" alt="" />
+              </button>
+              <button type="button" class="star-btn" aria-label="Rate 3 stars">
+                <img src="../assets/images/icons8-star-filled-48.png" alt="" />
+              </button>
+              <button type="button" class="star-btn" aria-label="Rate 4 stars">
+                <img src="../assets/images/icons8-star-filled-48.png" alt="" />
+              </button>
+              <button type="button" class="star-btn" aria-label="Rate 5 stars">
+                <img src="../assets/images/icons8-rating-40.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
   <footer>

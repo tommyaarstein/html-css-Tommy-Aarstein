@@ -2,13 +2,25 @@
     background-color: var(--color-bg-blue);
 }
 
+.products-page-title {
+    color: var(--color-text-inverse);
+    margin: 0 0 3rem;
+    text-align: left;
+}
+
+.products-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
 .products {
     padding: 3rem 0;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(286px, 286px));
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
     gap: 3rem;
     justify-content: center;
 }
