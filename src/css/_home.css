@@ -15,13 +15,13 @@
 
 .hero-blur {
   position: relative;
-  width: 750px;
-  height: 83px;
-  margin: 0 auto 2.5rem;
+  width: min(750px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 1.25rem;
 }
 
 /* Blur */
@@ -41,9 +41,12 @@
   margin: 0;
 
   font-family: var(--font-main);
-  font-size: 48px;
+  font-size: clamp(28px, 6vw, 48px);
   font-weight: 700;
   color: var(--color-bg-blue);
+  text-align: center;
+  max-width: 100%;
+  white-space: 100%;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
@@ -61,4 +64,9 @@
 .btn-primary {
   background-color: var(--color-bg-gold);
   color: #000000;
+}
+
+.hero-content .btn {
+  max-width: 220px;
+  width: 100%;
 }

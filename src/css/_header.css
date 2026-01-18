@@ -4,7 +4,7 @@ header {
   width: 100%;
 }
 
-/* Main header row (logo | nav | actions) */
+/* Desktop header layout */
 .header-bar {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr auto;
@@ -14,8 +14,8 @@ header {
   padding-bottom: 0.75rem;
 }
 
-/* Center nav in the middle lane */
-.header-bar nav {
+/* Center the desktop nav */
+.desktop-nav {
   display: flex;
   justify-content: center;
 }
@@ -27,7 +27,7 @@ header {
   display: block;
 }
 
-/* Navigation */
+/* Desktop nav links */
 .nav-list {
   display: flex;
   gap: 2rem;
@@ -44,23 +44,17 @@ header {
   font-weight: 600;
 }
 
-/* underline for current page */
 .nav-list a.active {
   border-bottom: 2px solid var(--color-text-primary);
 }
 
-/* Right side actions (cart + login/register) */
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Cart icon */
+/* ===== Cart ===== */
 .cart-link {
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-self: center;
+  width: fit-content;
 }
 
 .cart-link img {
@@ -69,19 +63,24 @@ header {
   display: block;
 }
 
-/* Badge (hidden until a number is added later) */
 .cart-badge {
-  display: none; /* later: turn on when it has a number */
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg-blue);
+  color: var(--color-text-inverse);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid var(--color-bg-gold);
 }
 
-.cart-link {
-  justify-self: center;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Login / Register */
+/* ===== Login / Register ===== */
 .auth-links {
   display: inline-flex;
   align-items: center;
@@ -94,4 +93,84 @@ header {
   color: var(--color-text-primary);
   text-decoration: none;
   font-weight: 500;
+}
+
+/* Mobile menu */
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav summary {
+  list-style: none;
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav-panel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
+  .header-bar {
+    grid-template-columns: 44px 1fr 44px;
+    column-gap: 0.75rem;
+    align-items: center;
+  }
+
+  .logo-link {
+    justify-self: center;
+  }
+
+  .desktop-nav,
+  .auth-links {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .nav-toggle {
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav[open] .mobile-nav-panel {
+    display: grid;
+  }
+
+  .mobile-nav-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: min(20vw, 260px);
+    background: var(--color-bg-gold);
+    padding: 1rem;
+    gap: 0.75rem;
+    z-index: 100;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 8px;
+  }
+
+  .mobile-nav-panel a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
 }

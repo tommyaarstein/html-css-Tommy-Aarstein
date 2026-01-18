@@ -8,26 +8,43 @@
     <link rel="stylesheet" href="../src/css/styles.css" />
   </head>
 <body>
-
   <header>
     <div class="container header-bar">
+
+      <!-- Mobile menu -->
+      <details class="mobile-nav">
+        <summary class="nav-toggle" aria-label="Open menu">☰</summary>
+
+        <nav class="mobile-nav-panel" aria-label="Mobile navigation">
+          <a href="../index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="coming-soon.html">About</a>
+          <a href="coming-soon.html">Login</a>
+          <a href="coming-soon.html">Register</a>
+        </nav>
+      </details>
+
+      <!-- Logo -->
       <a href="../index.html" class="logo-link">
         <img src="../assets/images/RainyDays_Logo.png" alt="RainyDays Logo" />
       </a>
 
-      <nav aria-label="Primary">
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="coming-soon.html">About</a></li>
         </ul>
       </nav>
 
+      <!-- Cart -->
       <a href="checkout.html" class="cart-link" aria-label="Shopping cart">
         <img src="../assets/images/icons8-shopping-cart-64.png" alt="" />
-        <span class="cart-badge" aria-hidden="true">1</span>
+        <span class="cart-badge" aria-hidden="true">0</span>
       </a>
 
+      <!-- Desktop auth -->
       <div class="auth-links">
         <a href="coming-soon.html">Login</a>
         <span aria-hidden="true">|</span>
